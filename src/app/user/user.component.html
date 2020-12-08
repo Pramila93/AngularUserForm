@@ -1,0 +1,18 @@
+<div>
+    <h2>Fill the User Information</h2>
+    <form>
+        <h4>User Name   :<input type="text" name="uname" [(ngModel)]="uname"></h4>
+        <h4>Gender  :<input type="radio" name="gender" [(ngModel)]="gender" value="Female">Female
+        &nbsp;      <input type="radio" name="gender" [(ngModel)]="gender" value="Male">Male </h4>
+        <h4>Birth-Date   :<input type="date" name="dob" [(ngModel)]="dob"></h4>
+        <h4>Address :<textarea cols="6" rows="3" name="address" [(ngModel)]="address"></textarea></h4>
+        <h4>Contact No. :<input type="number" name="contact" [(ngModel)]="contact"></h4>
+        <h4>Email Address :<input type="email" name="email" [(ngModel)]="email"></h4>
+        <button type="button" name="btn" (click)="display()">Display Data</button> &nbsp;
+        <button type="button" name="btn" (click)="hide()">Clear Data</button>
+    </form>
+
+    <div *ngIf="flag">
+        <app-dispdata [nuser]="nuser"></app-dispdata>
+    </div>
+</div>
